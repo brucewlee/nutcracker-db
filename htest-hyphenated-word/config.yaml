@@ -1,0 +1,23 @@
+abstract: On Language Tasks That Language Models Can't Learn - We argue that there are certain visual-auditory properties of language that our current language modeling formulation will likely never train without an adequate multi-modal expansion. Due to the fundamental difference in how we read language and how sensory-deprived machines read language, we naturally perceive and use these visual-auditory properties, but machines do not. As our NLP community advances toward a safe Human-LLM alignment, this deficiency of knowledge can pose an unexpected yet difficult-to-solve challenge, and we make a particular connection to the philosophical case of Mary (Jackson, 1986). We present an empirical investigation through a series of tasks, termed H-TEST, designed to explore the limits of LLMs in understanding the sensory aspects of language. Our experiments show that some of the strongest proprietary LLMs stay near random chance baseline accuracy of 50%, highlighting the limitations of knowledge acquired in the absence of sensory experience.
+arxiv: under review
+construction:
+  class: mcq
+  n_choices: 2
+few_shot: 50
+language: eng
+license: mit
+system_prompt: null
+task_name: htest-hyphenated-word
+timeline: ~2024.01.15
+user_prompt_template:
+  end_note: (Respond in one letter and nothing else)
+  example: "Question: \"{centerpiece}\" Answer: {correct_options[0]} \n\n"
+  mid_note: null
+  start_note: null
+  test: "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} "
+version: v1
+web_source:
+  file:
+    dev: htest_generated_with_seed_12062023/*_dev.jsonl
+    test: htest_generated_with_seed_12062023/*_test.jsonl
+  location: https://github.com/brucewlee/H-Test

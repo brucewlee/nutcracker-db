@@ -1,0 +1,20 @@
+abstract: Measuring Massive Multitask Language Understanding - We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.
+arxiv: https://arxiv.org/abs/2009.03300
+construction:
+  class: mcq
+  n_choices: 4
+few_shot: 5
+language: eng
+license: mit
+task_name: mmlu-nutrition
+timeline: ~2020.09.07
+user_prompt_template:
+  example: "Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]}? Answer: {correct_options[0]} \n\n"
+  start_note: "The following are multiple choice questions (with answers) about nutrition. \n"
+  test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]}? Answer: '
+version: v1
+web_source:
+  file:
+    dev: dev/*
+    test: test/*
+  location: https://people.eecs.berkeley.edu/~hendrycks/data.tar

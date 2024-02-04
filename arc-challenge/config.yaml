@@ -1,0 +1,19 @@
+abstract: Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge - We present a new question set, text corpus, and baselines assembled to encourage AI research in advanced question answering. Together, these constitute the AI2 Reasoning Challenge (ARC), which requires far more powerful knowledge and reasoning than previous challenges such as SQuAD or SNLI. The ARC question set is partitioned into a Challenge Set and an Easy Set, where the Challenge Set contains only questions answered incorrectly by both a retrieval-based algorithm and a word co-occurence algorithm. The dataset contains only natural, grade-school science questions (authored for human tests), and is the largest public-domain set of this kind (7,787 questions). We test several baselines on the Challenge Set, including leading neural models from the SQuAD and SNLI tasks, and find that none are able to significantly outperform a random baseline, reflecting the difficult nature of this task. We are also releasing the ARC Corpus, a corpus of 14M science sentences relevant to the task, and implementations of the three neural baseline models tested. Can your model perform better? We pose ARC as a challenge to the community.
+arxiv: https://arxiv.org/abs/1803.05457
+construction:
+  class: mcq
+  n_choices: mixed
+few_shot: 25
+language: eng
+license: cc-by-sa-4.0
+task_name: arc-challenge
+timeline: ~2018.03.14
+user_prompt_template:
+  example: '<wild*card>option_labels = ''ABCDEFGHIJKLMNOPQRSTUVWXYZ''; return f''Question: {centerpiece} '' + '' ''.join([f''{option_labels[i]}. {option}'' for i, option in enumerate(options)]) + f'' Answer: {correct_options[0]} \n\n'''
+  test: '<wild*card>option_labels = ''ABCDEFGHIJKLMNOPQRSTUVWXYZ''; return f''Question: {centerpiece} '' + '' ''.join([f''{option_labels[i]}. {option}'' for i, option in enumerate(options)]) + f'' Answer: '''
+version: v1
+web_source:
+  file:
+    dev: ARC-Challenge/ARC-Challenge-Dev.jsonl[:101]
+    test: ARC-Challenge/ARC-Challenge-Test.jsonl
+  location: https://ai2-public-datasets.s3.amazonaws.com/arc/ARC-V1-Feb2018.zip

@@ -1,0 +1,50 @@
+{"centerpiece": "The cube of approximately equal to 11.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The integral + 7.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral less than 11.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The integral / 7.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral times 10.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The sum + 10.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The square root plus 8.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The square root / 4.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral to the power of 12.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The cube of = 7.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The value of x times 12.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The sum > 8.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The square root approximately equal to 8.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The square root < 6.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The cube of equals to 6.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The sum + 10.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The fraction plus 9.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The cube of ^ 8.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The product times 8.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The product > 11.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The derivative approximately equal to 5.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The limit % 5.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The cube of plus 6.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The value of x < 6.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The value of x divided by 10.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The limit % 9.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral approximately equal to 8.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The value of x * 9.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The derivative equals to 12.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The product % 9.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The sum approximately equal to 6.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The value of x - 3.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral divided by 4.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The product < 12.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The limit to the power of 3.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The square root > 10.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The angle plus 3.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The product % 12.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The square root to the power of 9.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The integral + 3.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The derivative times 9.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The sum ^ 6.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The product plus 11.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The sum - 4.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The integral modulo 3.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The product = 4.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The fraction modulo 11.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The value of x % 3.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}
+{"centerpiece": "The fraction less than 6.", "options": ["A", "B"], "correct_options": ["A"], "correct_options_literal": ["A"], "correct_options_idx": [0]}
+{"centerpiece": "The limit - 11.", "options": ["A", "B"], "correct_options": ["B"], "correct_options_literal": ["B"], "correct_options_idx": [1]}

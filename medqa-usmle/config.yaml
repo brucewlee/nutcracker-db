@@ -1,0 +1,19 @@
+abstract: 'What disease does this patient have? a large-scale open domain question answering dataset from medical exams - Open domain question answering (OpenQA) tasks have been recently attracting more and more attention from the natural language processing (NLP) community. In this work, we present the first free-form multiple-choice OpenQA dataset for solving medical problems, MedQA, collected from the professional medical board exams. It covers three languages: English, simplified Chinese, and traditional Chinese, and contains 12,723, 34,251, and 14,123 questions for the three languages, respectively. We implement both rule-based and popular neural methods by sequentially combining a document retriever and a machine comprehension model. Through experiments, we find that even the current best method can only achieve 36.7%, 42.0%, and 70.1% of test accuracy on the English, traditional Chinese, and simplified Chinese questions, respectively. We expect MedQA to present great challenges to existing OpenQA systems and hope that it can serve as a platform to promote much stronger OpenQA models from the NLP community in the future.'
+arxiv: https://arxiv.org/abs/2009.13081
+construction:
+  class: mcq
+  n_choices: 5
+few_shot: 5
+language: eng
+license: mit
+task_name: medqa-usmle
+timeline: ~2020.09.28
+user_prompt_template:
+  example: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]} E. {options[4]}? Answer: {correct_options[0]} '
+  test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]} E. {options[4]}? Answer: '
+version: v1
+web_source:
+  file:
+    dev: questions/US/dev.jsonl[:101]
+    test: questions/US/test.jsonl
+  location: https://drive.google.com/file/d/1ImYUSLk9JbgHXOemfvyiDiirluZHPeQw/view?usp=sharing
