@@ -36,7 +36,7 @@ def generate_readme_table(base_path):
     for index, item in enumerate(sorted_directories, start=1):
         dir_path = os.path.join(base_path, item)
         config_path = os.path.join(dir_path, 'config.yaml')
-        test_jsonl_path = os.path.join(dir_path, 'test.jsonl')
+        test_jsonl_path = os.path.join(dir_path, 'test.json')
         if os.path.exists(config_path):
             config_data = extract_data_from_config(config_path, test_jsonl_path)
             table_data.append([
