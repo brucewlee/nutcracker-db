@@ -10,11 +10,8 @@ system_prompt: null
 task_name: htest-rhyme
 timeline: ~2024.01.15
 user_prompt_template:
-  end_note: (Respond in one letter and nothing else)
   example: "Question: \"{centerpiece}\" Answer: {correct_options[0]} \n\n"
-  mid_note: null
-  start_note: null
-  test: "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} "
+  test: "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} (Respond in one letter and nothing else)"
 version: v1
 web_source:
   file:
