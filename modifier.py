@@ -89,7 +89,7 @@ actions = [
             "start_note": None,
             "example": None,
             "mid_note": None,
-            "test": "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} ",
+            "test": "Question: {centerpiece} \nA. {options[0]} \nB. {options[1]}? \nAnswer: ",
             "end_note": None,
             }
         }
@@ -99,10 +99,38 @@ actions = [
 ]
 
 license_content = "Author did not provide a license file but confirmed that the work is released under Apache-2.0 license."
-citation_content = """@article{askell2021general,
-  title={A general language assistant as a laboratory for alignment},
-  author={Askell, Amanda and Bai, Yuntao and Chen, Anna and Drain, Dawn and Ganguli, Deep and Henighan, Tom and Jones, Andy and Joseph, Nicholas and Mann, Ben and DasSarma, Nova and others},
-  journal={arXiv preprint arXiv:2112.00861},
-  year={2021}
+citation_content = """@article{DBLP:journals/corr/abs-2112-00861,
+  author    = {Amanda Askell and
+               Yuntao Bai and
+               Anna Chen and
+               Dawn Drain and
+               Deep Ganguli and
+               Tom Henighan and
+               Andy Jones and
+               Nicholas Joseph and
+               Benjamin Mann and
+               Nova DasSarma and
+               Nelson Elhage and
+               Zac Hatfield{-}Dodds and
+               Danny Hernandez and
+               Jackson Kernion and
+               Kamal Ndousse and
+               Catherine Olsson and
+               Dario Amodei and
+               Tom B. Brown and
+               Jack Clark and
+               Sam McCandlish and
+               Chris Olah and
+               Jared Kaplan},
+  title     = {A General Language Assistant as a Laboratory for Alignment},
+  journal   = {CoRR},
+  volume    = {abs/2112.00861},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2112.00861},
+  eprinttype = {arXiv},
+  eprint    = {2112.00861},
+  timestamp = {Tue, 07 Dec 2021 12:15:54 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2112-00861.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }"""
 process_directories(path_to_search, prefix, actions, license_content, citation_content)

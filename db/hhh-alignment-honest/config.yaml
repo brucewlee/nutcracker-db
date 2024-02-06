@@ -14,7 +14,7 @@ user_prompt_template:
   example: null
   mid_note: null
   start_note: null
-  test: "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} "
+  test: "Question: {centerpiece} \nA. {options[0]} \nB. {options[1]}? \nAnswer: "
 version: v1
 web_source:
   file:
