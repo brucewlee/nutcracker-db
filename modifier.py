@@ -63,19 +63,46 @@ def process_directories(base_path, prefix, actions, license_content=None, citati
                 add_citation_file(dir_path, citation_content)
 
 # Example usage
-path_to_search = "."  # Current directory
-prefix = "htest*" #prefix then *
+path_to_search = "db"  # Current directory
+prefix = "hhh-*" #prefix then *
 
 # Define actions as a list of modifications/deletions to perform
 actions = [
-    {"type": "modify", "data": {"abstract": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale - The Winograd Schema Challenge (WSC) (Levesque, Davis, and Morgenstern 2011), a benchmark for commonsense reasoning, is a set of 273 expert-crafted pronoun resolution problems originally designed to be unsolvable for statistical models that rely on selectional preferences or word associations. However, recent advances in neural language models have already reached around 90% accuracy on variants of WSC. This raises an important question whether these models have truly acquired robust commonsense capabilities or whether they rely on spurious biases in the datasets that lead to an overestimation of the true capabilities of machine commonsense. To investigate this question, we introduce WinoGrande, a large-scale dataset of 44k problems, inspired by the original WSC design, but adjusted to improve both the scale and the hardness of the dataset. The key steps of the dataset construction consist of (1) a carefully designed crowdsourcing procedure, followed by (2) systematic bias reduction using a novel AfLite algorithm that generalizes human-detectable word associations to machine-detectable embedding associations. The best state-of-the-art methods on WinoGrande achieve 59.4-79.1%, which are 15-35% below human performance of 94.0%, depending on the amount of the training data allowed. Furthermore, we establish new state-of-the-art results on five related benchmarks - WSC (90.1%), DPR (93.1%), COPA (90.6%), KnowRef (85.6%), and Winogender (97.1%). These results have dual implications: on one hand, they demonstrate the effectiveness of WinoGrande when used as a resource for transfer learning. On the other hand, they raise a concern that we are likely to be overestimating the true capabilities of machine commonsense across all these benchmarks. We emphasize the importance of algorithmic bias reduction in existing and future benchmarks to mitigate such overestimation."}},
-    {"type": "modify", "data": {"arxiv": "https://arxiv.org/abs/1907.10641"}},
+    {"type": "modify", "data": {"abstract": "A General Language Assistant as a Laboratory for Alignment - Given the broad capabilities of large language models, it should be possible to work towards a general-purpose, text-based assistant that is aligned with human values, meaning that it is helpful, honest, and harmless. As an initial foray in this direction we study simple baseline techniques and evaluations, such as prompting. We find that the benefits from modest interventions increase with model size, generalize to a variety of alignment evaluations, and do not compromise the performance of large models. Next we investigate scaling trends for several training objectives relevant to alignment, comparing imitation learning, binary discrimination, and ranked preference modeling. We find that ranked preference modeling performs much better than imitation learning, and often scales more favorably with model size. In contrast, binary discrimination typically performs and scales very similarly to imitation learning. Finally we study a `preference model pre-training' stage of training, with the goal of improving sample efficiency when finetuning on human preferences."}},
+    {"type": "modify", "data": {"arxiv": "https://arxiv.org/abs/2112.00861"}},
     {"type": "modify", "data": {"construction": {"class": "mcq", "n_choices": 2}}},
+    {"type": "modify", "data": {"few_shot": 0}},
+    {"type": "modify", "data": {"timeline": "~2023.12.01"}},
     {"type": "modify", "data": {"license": "apache-2.0"}},
-    {"type": "modify", "data": {"web_source": {"file": {"dev": "winogrande_1.1/train.jsonl[:101]", "test": "winogrande_1.1/dev.jsonl"}, "location": "https://winogrande.allenai.org/"}}},
+    {"type": "modify", "data": {
+        "web_source": {
+            "file": {
+                "dev": None,
+                "test": "data/*/task.json"
+                }, 
+            "location": "https://huggingface.co/datasets/HuggingFaceH4/hhh_alignment"
+            }
+        }
+    },
+    {"type": "modify", "data": {
+        "user_prompt_template": {
+            "start_note": None,
+            "example": None,
+            "mid_note": None,
+            "test": "Question: \"{centerpiece}\" Answer: \n{options[0]}\n{options[1]} ",
+            "end_note": None,
+            }
+        }
+    },
+    
     #{"type": "delete", "data": ["citation"]}
 ]
 
-license_content = None
-citation_content = None
+license_content = "Author did not provide a license file but confirmed that the work is released under Apache-2.0 license."
+citation_content = """@article{askell2021general,
+  title={A general language assistant as a laboratory for alignment},
+  author={Askell, Amanda and Bai, Yuntao and Chen, Anna and Drain, Dawn and Ganguli, Deep and Henighan, Tom and Jones, Andy and Joseph, Nicholas and Mann, Ben and DasSarma, Nova and others},
+  journal={arXiv preprint arXiv:2112.00861},
+  year={2021}
+}"""
 process_directories(path_to_search, prefix, actions, license_content, citation_content)
