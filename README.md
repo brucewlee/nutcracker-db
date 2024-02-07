@@ -1,3 +1,14 @@
+# Nutcracker-DB
+
+## Latest Update
+- Date: 2024-02-06
+- Change: Added SocialIQa.
+
+## Database Statistics
+- Total Number of Tasks: 82
+- Total Number of Instances: 39810
+
+## Dataset Overview
 |Index|Task Name|Version|Construction|Arxiv Link|License|Dataset Size|
 |---|---|---|---|---|---|---|
 |1|arc-challenge|v1|mcq, mixed|https://arxiv.org/abs/1803.05457|cc-by-sa-4.0|1172|
@@ -78,6 +89,8 @@
 |76|mmlu-world-religions|v1|mcq, 4|https://arxiv.org/abs/2009.03300|mit|171|
 |77|openbookqa|v1|mcq, 4|https://arxiv.org/abs/1809.02789|apache-2.0|500|
 |78|piqa|v1|mcq, 2|https://arxiv.org/abs/1911.11641|afl-3.0|1838|
-|79|truthfulqa-mc1|v1|mcq, mixed|https://arxiv.org/abs/2109.07958|apache-2.0|817|
-|80|truthfulqa-mc2|v1|mcq, mixed|https://arxiv.org/abs/2109.07958|apache-2.0|817|
-|81|winogrande|v1|mcq, 2|https://arxiv.org/abs/1907.10641|apache-2.0|1267|
+|79|socialiqa|v1|mcq, 3|https://arxiv.org/abs/1904.09728|cc-by-4.0|2224|
+|80|truthfulqa-mc1|v1|mcq, mixed|https://arxiv.org/abs/2109.07958|apache-2.0|817|
+|81|truthfulqa-mc2|v1|mcq, mixed|https://arxiv.org/abs/2109.07958|apache-2.0|817|
+|82|winogrande|v1|mcq, 2|https://arxiv.org/abs/1907.10641|apache-2.0|1267|
+
