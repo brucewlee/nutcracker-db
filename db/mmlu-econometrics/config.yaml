@@ -9,8 +9,8 @@ license: mit
 task_name: mmlu-econometrics
 timeline: ~2020.09.07
 user_prompt_template:
-  example: "Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]}? Answer: {correct_options[0]} \n\n"
   start_note: "The following are multiple choice questions (with answers) about econometrics. \n"
+  example: "Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]}? Answer: {correct_options[0]} \n\n"
   test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]}? Answer: '
 version: v1
 web_source:
