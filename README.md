@@ -1,8 +1,8 @@
 # Nutcracker-DB
 
 ## Latest Update
-- Date: 2024-02-06
-- Change: Added SocialIQa.
+- Date: 2024-02-19
+- Change: Added sanity checker.
 
 ## Database Statistics
 - Total Number of Tasks: 82
@@ -13,7 +13,7 @@
 |---|---|---|---|---|---|---|
 |1|arc-challenge|v1|mcq, mixed|https://arxiv.org/abs/1803.05457|cc-by-sa-4.0|1172|
 |2|arc-easy|v1|mcq, mixed|https://arxiv.org/abs/1803.05457|cc-by-sa-4.0|2376|
-|3|commonsenseqa|v1|mcq, 4|https://arxiv.org/abs/1811.00937|mit|1221|
+|3|commonsenseqa|v1|mcq, 5|https://arxiv.org/abs/1811.00937|mit|1221|
 |4|hellaswag|v1|mcq, 4|https://arxiv.org/abs/1905.07830|mit|10042|
 |5|hhh-alignment-harmless|v1|mcq, 2|https://arxiv.org/abs/2112.00861|apache-2.0|58|
 |6|hhh-alignment-helpful|v1|mcq, 2|https://arxiv.org/abs/2112.00861|apache-2.0|59|

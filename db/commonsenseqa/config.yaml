@@ -2,7 +2,7 @@ abstract: 'CommonsenseQA: A Question Answering Challenge Targeting Commonsense K
 arxiv: https://arxiv.org/abs/1811.00937
 construction:
   class: mcq
-  n_choices: 4
+  n_choices: 5
 few_shot: 5
 language: eng
 license: mit
