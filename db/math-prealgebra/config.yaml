@@ -9,7 +9,7 @@ license: mit
 task_name: math-prealgebra
 timeline: ~2021.11.18
 user_prompt_template:
-  example: 'Question: {centerpiece} Answer: {answer}\n\n'
+  example: 'Question: {centerpiece} Answer: {correct_options[0]}\n\n'
   test: 'Question: {centerpiece} Answer: '
 version: v1
 web_source:
