@@ -17,7 +17,7 @@ def extract_data_from_config(config_path, test_jsonl_path):
     return {
         'task_name': config_data.get('task_name', 'N/A'),
         'version': config_data.get('version', 'N/A'),
-        'construction': f"{config_data.get('construction', {}).get('class', 'N/A')}, {config_data.get('construction', {}).get('n_choices', 'N/A')}",
+        'construction': f"{config_data.get('construction', {})}",
         'arxiv': config_data.get('arxiv', 'N/A'),
         'license': config_data.get('license', 'N/A'),
         'user_prompt_template': ", ".join([f"{k}: {v}" for k, v in config_data.get('user_prompt_template', {}).items()]),

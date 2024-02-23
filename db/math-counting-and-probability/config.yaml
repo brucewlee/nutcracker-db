@@ -6,7 +6,7 @@ construction:
 few_shot: 5
 language: eng
 license: mit
-task_name: gsm8k
+task_name: math-counting-and-probability
 timeline: ~2021.11.18
 user_prompt_template:
   example: 'Question: {centerpiece} Answer: {answer}\n\n'
