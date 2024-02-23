@@ -35,7 +35,7 @@ def generate_markdown_table(data):
 def write_readme(base_path, readme_table, total_tasks, total_instances):
     readme_path = 'README.md'  # Ensure the README.md is written to the base path
     latest_update = datetime.now().strftime("%Y-%m-%d")
-    latest_change = "Added sanity checker."
+    latest_change = "Added MATH, GSM8K, and aqua-rat."
 
     readme_content = f"""# Nutcracker-DB
 

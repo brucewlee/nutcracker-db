@@ -2,6 +2,29 @@ import os
 import yaml
 import fnmatch
 
+def escape_newlines(data):
+    """
+    Recursively escape newline characters in string values within a nested dictionary.
+    """
+    if isinstance(data, dict):
+        return {k: escape_newlines(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [escape_newlines(v) for v in data]
+    elif isinstance(data, str):
+        return data.replace('\n', '\\n')
+    else:
+        return data
+
+def unescape_newlines_in_file(file_path):
+    """
+    Replace escaped newline placeholders in a file with actual newline characters.
+    """
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    content = content.replace('\\n', '\n')
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(content)
+
 def deep_update(source, updates):
     """
     Update a nested dictionary or similar mapping.
@@ -23,7 +46,9 @@ def modify_yaml_file(file_path, actions):
     for action in actions:
         if action['type'] == "modify":
             # Use deep_update for nested dictionaries
-            deep_update(data, action['data'])
+            #deep_update(data, action['data'])
+            updated_data = escape_newlines(action['data'])
+            data = deep_update(data, updated_data)
         elif action['type'] == "delete":
             for key in action['data']:
                 if key in data:
@@ -64,33 +89,30 @@ def process_directories(base_path, prefix, actions, license_content=None, citati
 
 # Example usage
 path_to_search = "db"  # Current directory
-prefix = "hhh-*" #prefix then *
+prefix = "math-*" #prefix then *
 
 # Define actions as a list of modifications/deletions to perform
 actions = [
-    {"type": "modify", "data": {"abstract": "A General Language Assistant as a Laboratory for Alignment - Given the broad capabilities of large language models, it should be possible to work towards a general-purpose, text-based assistant that is aligned with human values, meaning that it is helpful, honest, and harmless. As an initial foray in this direction we study simple baseline techniques and evaluations, such as prompting. We find that the benefits from modest interventions increase with model size, generalize to a variety of alignment evaluations, and do not compromise the performance of large models. Next we investigate scaling trends for several training objectives relevant to alignment, comparing imitation learning, binary discrimination, and ranked preference modeling. We find that ranked preference modeling performs much better than imitation learning, and often scales more favorably with model size. In contrast, binary discrimination typically performs and scales very similarly to imitation learning. Finally we study a `preference model pre-training' stage of training, with the goal of improving sample efficiency when finetuning on human preferences."}},
-    {"type": "modify", "data": {"arxiv": "https://arxiv.org/abs/2112.00861"}},
-    {"type": "modify", "data": {"construction": {"class": "mcq", "n_choices": 2}}},
-    {"type": "modify", "data": {"few_shot": 0}},
-    {"type": "modify", "data": {"timeline": "~2023.12.01"}},
-    {"type": "modify", "data": {"license": "apache-2.0"}},
+    {"type": "modify", "data": {"abstract": "Measuring Mathematical Problem Solving With the MATH Dataset - Many intellectual endeavors require mathematical problem solving, but this skill remains beyond the capabilities of computers. To measure this ability in machine learning models, we introduce MATH, a new dataset of 12,500 challenging competition mathematics problems. Each problem in MATH has a full step-by-step solution which can be used to teach models to generate answer derivations and explanations. To facilitate future research and increase accuracy on MATH, we also contribute a large auxiliary pretraining dataset which helps teach models the fundamentals of mathematics. Even though we are able to increase accuracy on MATH, our results show that accuracy remains relatively low, even with enormous Transformer models. Moreover, we find that simply increasing budgets and model parameter counts will be impractical for achieving strong mathematical reasoning if scaling trends continue. While scaling Transformers is automatically solving most other text-based tasks, scaling is not currently solving MATH. To have more traction on mathematical problem solving we will likely need new algorithmic advancements from the broader research community."}},
+    {"type": "modify", "data": {"arxiv": "https://arxiv.org/abs/2103.03874"}},
+    {"type": "modify", "data": {"construction": {"class": "frq", "type": "simple"}}},
+    {"type": "modify", "data": {"few_shot": 5}},
+    {"type": "modify", "data": {"timeline": "~2021.11.18"}},
+    {"type": "modify", "data": {"license": "mit"}},
     {"type": "modify", "data": {
         "web_source": {
             "file": {
-                "dev": None,
-                "test": "data/*/task.json"
+                "dev": "train/*[:101]",
+                "test": "test/*"
                 }, 
-            "location": "https://huggingface.co/datasets/HuggingFaceH4/hhh_alignment"
+            "location": "https://people.eecs.berkeley.edu/~hendrycks/MATH.tar"
             }
         }
     },
     {"type": "modify", "data": {
         "user_prompt_template": {
-            "start_note": None,
-            "example": None,
-            "mid_note": None,
-            "test": "Question: {centerpiece} \nA. {options[0]} \nB. {options[1]}? \nAnswer: ",
-            "end_note": None,
+            "example": 'Question: {centerpiece} Answer: {answer}\n\n',
+            "test": 'Question: {centerpiece} Answer: ',
             }
         }
     },
@@ -98,40 +120,32 @@ actions = [
     #{"type": "delete", "data": ["citation"]}
 ]
 
-license_content = "Author did not provide a license file but confirmed that the work is released under Apache-2.0 license."
-citation_content = """@article{DBLP:journals/corr/abs-2112-00861,
-  author    = {Amanda Askell and
-               Yuntao Bai and
-               Anna Chen and
-               Dawn Drain and
-               Deep Ganguli and
-               Tom Henighan and
-               Andy Jones and
-               Nicholas Joseph and
-               Benjamin Mann and
-               Nova DasSarma and
-               Nelson Elhage and
-               Zac Hatfield{-}Dodds and
-               Danny Hernandez and
-               Jackson Kernion and
-               Kamal Ndousse and
-               Catherine Olsson and
-               Dario Amodei and
-               Tom B. Brown and
-               Jack Clark and
-               Sam McCandlish and
-               Chris Olah and
-               Jared Kaplan},
-  title     = {A General Language Assistant as a Laboratory for Alignment},
-  journal   = {CoRR},
-  volume    = {abs/2112.00861},
-  year      = {2021},
-  url       = {https://arxiv.org/abs/2112.00861},
-  eprinttype = {arXiv},
-  eprint    = {2112.00861},
-  timestamp = {Tue, 07 Dec 2021 12:15:54 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2112-00861.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+license_content = """MIT License
+
+Copyright (c) 2021 Dan Hendrycks
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE."""
+citation_content = """@article{hendrycksmath2021,
+  title={Measuring Mathematical Problem Solving With the MATH Dataset},
+  author={Dan Hendrycks and Collin Burns and Saurav Kadavath and Akul Arora and Steven Basart and Eric Tang and Dawn Song and Jacob Steinhardt},
+  journal={NeurIPS},
+  year={2021}
 }
 """
 process_directories(path_to_search, prefix, actions, license_content, citation_content)

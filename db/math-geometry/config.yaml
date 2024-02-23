@@ -1,0 +1,19 @@
+abstract: Measuring Mathematical Problem Solving With the MATH Dataset - Many intellectual endeavors require mathematical problem solving, but this skill remains beyond the capabilities of computers. To measure this ability in machine learning models, we introduce MATH, a new dataset of 12,500 challenging competition mathematics problems. Each problem in MATH has a full step-by-step solution which can be used to teach models to generate answer derivations and explanations. To facilitate future research and increase accuracy on MATH, we also contribute a large auxiliary pretraining dataset which helps teach models the fundamentals of mathematics. Even though we are able to increase accuracy on MATH, our results show that accuracy remains relatively low, even with enormous Transformer models. Moreover, we find that simply increasing budgets and model parameter counts will be impractical for achieving strong mathematical reasoning if scaling trends continue. While scaling Transformers is automatically solving most other text-based tasks, scaling is not currently solving MATH. To have more traction on mathematical problem solving we will likely need new algorithmic advancements from the broader research community.
+arxiv: https://arxiv.org/abs/2103.03874
+construction:
+  class: frq
+  type: simple
+few_shot: 5
+language: eng
+license: mit
+task_name: gsm8k
+timeline: ~2021.11.18
+user_prompt_template:
+  example: 'Question: {centerpiece} Answer: {answer}\n\n'
+  test: 'Question: {centerpiece} Answer: '
+version: v1
+web_source:
+  file:
+    dev: train/*[:101]
+    test: test/*
+  location: https://people.eecs.berkeley.edu/~hendrycks/MATH.tar
