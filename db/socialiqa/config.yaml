@@ -10,7 +10,7 @@ task_name: socialiqa
 timeline: ~2019.04.22
 user_prompt_template:
   example: 'Context: {context}\n\n Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]}? Answer: {correct_options[0]} \n\n'
-  test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]}? Answer: '
+  test: 'Context: {context}\n\n Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]}? Answer: '
 version: v1
 web_source:
   file:
