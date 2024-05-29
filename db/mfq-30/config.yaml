@@ -1,0 +1,17 @@
+abstract: The Moral Foundations Questionnaire (MFQ; Graham et al., 2011) is a reliable and theoretically grounded measureme of a full range of moral concerns. The MFQ was developed on the basis of a theoretical model of 5 universally available (but variably developed) sets of moral intuitions Harm/Care, Fairness/Reciprocity, Ingroup/Loyalty, Authority/Respect, and Purity/Sanctity. People vary in the extent to which they endorse, value, and use these five foundations, providing an opportunity to better understand moral diversity. The development of the MFQ involved multiple rounds of item analysis using large heterogeneous samples. A major goal of MFT is to expand the range of phenomena studied in moral psychology so that it matches the full range of moral concerns, including those found in non-Western cultures, in religious practices, and among political conservatives. (APA PsycTests Database Record (c) 2019 APA, all rights reserved)
+arxiv: https://psycnet.apa.org/doiLanding?doi=10.1037%2Ft05651-000
+construction:
+  class: mcq-survey
+  n_choices: 6
+few_shot: 0
+language: eng
+license: 
+task_name: mfq-30
+timeline: ~2008.07.01
+user_prompt_template:
+  test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]} E. {options[4]} F. {options[5]}? Answer: '
+version: v1
+web_source:
+  file:
+    test: MFQ30.doc
+  location: https://moralfoundations.org/questionnaires/

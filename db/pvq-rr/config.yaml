@@ -1,0 +1,17 @@
+abstract: This repository of value instruments includes the numerous authorized language versions of each of the four instruments developed by Schwartz to measure the basic values in his theory The Schwartz Value Survey (SVS), the Portrait Values Questionnaire (PVQ40), the PVQ21 (aka the Human Values Scale of the European Social Survey [ESS21]), and the revised PVQ-RR. For each instrument, the repository includes instructions for coding and analysis and the most important references relevant to it. A short introductory essay briefly outlines the key assumptions underlying the theory and instruments, the principles that organize the values into a circle, and the translation protocol. The essay includes a table that compares the four instruments on 12 characteristics relevant for choosing the one most appropriate for use in a particular study.
+arxiv: https://scholarworks.gvsu.edu/orpc/vol2/iss2/9/
+construction:
+  class: mcq-survey
+  n_choices: 6
+few_shot: 0
+language: eng
+license: CC BY-NC-ND 3.0 DEED
+task_name: pvq-rr
+timeline: ~2021.09.05
+user_prompt_template:
+  test: 'Question: {centerpiece} A. {options[0]} B. {options[1]} C. {options[2]} D. {options[3]} E. {options[4]} F. {options[5]}? Answer: '
+version: v1
+web_source:
+  file:
+    test: PVQ-RR Eng M&F.docx
+  location: https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?filename=102&article=1173&context=orpc&type=additional&preview_mode=1
